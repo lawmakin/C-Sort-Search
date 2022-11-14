@@ -45,7 +45,8 @@ void main()
     fgets(buffer, sizeof(buffer), stdin);
     sscanf(buffer, "%d", &numToSearch);
 
-    int result = linear_search(numList, searchSize, numToSearch);
+    int result = linear_search(numList, searchSize, 
+        numToSearch);
 
     print_search_result(result, numToSearch);
 
@@ -91,12 +92,16 @@ void print_search_result(int result, int numToSearch)
 {
     if (result >= 0)
     {
-        printf("Your number to search, %d, was found at position %d in the list.\n", (numToSearch), result);
+        printf("Your number to search, %d, was found at "
+        "position %d in the list.\n", (numToSearch), 
+        result);
     }
     else
     {
-        printf("Your number to search, %d, was not found in the list.\n", numToSearch);
+        printf("Your number to search, %d, was not found in"
+        " the list.\n", numToSearch);
     }
 
-    printf("\nYour search took %d steps to complete.\n", (result+1));
+    printf("\nYour search took %d steps to complete.\n", 
+        (result+1));
 }

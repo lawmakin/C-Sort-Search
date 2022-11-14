@@ -21,7 +21,8 @@ void print_int_array(int *numList, int searchSize);
 int binary_search(int *numList, int searchSize, 
     int numToSearch, int *steps);
 int int_compare(const void *val1, const void *val2);
-void print_search_result(int result, int numToSearch, int steps);
+void print_search_result(int result, int numToSearch, 
+    int steps);
 
 /* Functions */
 void main()
@@ -50,7 +51,8 @@ void main()
     sscanf(buffer, "%d", &numToSearch);
 
     int steps = 0;
-    int result = binary_search(numList, searchSize, numToSearch, &steps);
+    int result = binary_search(numList, searchSize, 
+        numToSearch, &steps);
 
     print_search_result(result, numToSearch, steps);
 
@@ -83,7 +85,8 @@ void print_int_array(int *numList, int searchSize)
 int binary_search(int *numList, int searchSize, 
     int numToSearch, int *steps)
 {
-    int lower_bound = 0, upper_bound = searchSize-1, midpoint = 0, value_midpoint = 0;
+    int lower_bound = 0, upper_bound = searchSize-1, 
+        midpoint = 0, value_midpoint = 0;
 
     while(lower_bound <= upper_bound) {
         *steps += 1;
@@ -119,14 +122,19 @@ int int_compare(const void *val1, const void *val2)
     return (*num1 > *num2) - (*num1 < *num2);
 }
 
-void print_search_result(int result, int numToSearch, int steps)
+void print_search_result(int result, int numToSearch, 
+    int steps)
 {
     if(result >= 0) {
-        printf("Your number to search, %d, was found at position %d in the list.\n", (numToSearch), result);
+        printf("Your number to search, %d, was found at "
+            "position %d in the list.\n", (numToSearch), 
+            result);
     }
     else {
-        printf("Your number to search, %d, was not found in the list.\n", numToSearch);
+        printf("Your number to search, %d, was not found in"
+        " the list.\n", numToSearch);
     }
 
-    printf("\nYour search took %d steps to complete.\n", (steps));
+    printf("\nYour search took %d steps to complete.\n", 
+        (steps));
 }
