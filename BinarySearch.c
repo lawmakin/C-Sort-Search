@@ -2,7 +2,7 @@
  * PROGRAM NAME: BinarySearch.c                            *
  *                                                         *
  * PURPOSE: A program that performs a binary search        *
- *          (O(log n)) on a sorted array of random        *
+ *          (O(log n)) on a sorted array of random         *
  *          generated integers.                            *
  *                                                         *
  * AUTHOR: coderlaw                                        *
